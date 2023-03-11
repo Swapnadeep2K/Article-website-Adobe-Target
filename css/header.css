@@ -1,0 +1,19 @@
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.navbar-brand {
+    padding-bottom: 0px !important;
+}
+.navbar {
+    background-color: #2C2C2C;
+}
+#navbarButtonsExample {
+    justify-content: space-between;
+}
+.btn.btn-dark.px-3 {
+    background-color: transparent;
+    border-color: #2C2C2C;
+}
