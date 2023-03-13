@@ -19,6 +19,144 @@
     height: 25vh;
 }
 
+.sidebar-heading {
+    margin-bottom: 24px;
+    margin-top: 40px;
+}
+
+.sidebar-heading-h2 {
+    font-weight: 900;
+    letter-spacing: 0;
+    font-size: 20px;
+    color: rgba(41, 41, 41, 1);
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 20px;
+}
+
+.sidebar-article-1 {
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar-article-2 {
+    margin-bottom: 24px;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+}
+
+.sidebar-article-3 {
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+}
+
+.sidebar-article-text {
+    flex: 1 0 0%;
+    margin-right: 24px;
+    flex-direction: column;
+    display: flex;
+}
+
+.sidebar-article-subline {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-article-subline-category-icon {
+    margin-right: 8px;
+}
+
+.sidebar-article-category-icon-a {
+    color: inherit;
+    fill: inherit;
+    font-size: inherit;
+    border: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-article-category-icon-a-div {
+    position: relative;
+}
+
+.sidebar-article-subline-more {
+    padding-right: 4px;
+}
+
+.sidebar-article-subline-more-p {
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    max-height: 20px;
+    overflow: hidden;
+    font-size: 13px;
+    color: rgba(117, 117, 117, 1);
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.sidebar-article-subline-from {
+    padding-right: 4px;
+}
+
+.sidebar-article-subline-from-p {
+    font-size: 13px;
+    color: rgba(117, 117, 117, 1);
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.sidebar-article-subline-category-name-a-p {
+    -webkit-text-size-adjust: 100%;
+    --reach-tabs: 1;
+    --reach-menu-button: 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    fill: inherit;
+    letter-spacing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgba(41, 41, 41, 1);
+    font-size: 13px;
+    overflow: hidden;
+    max-height: 20px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+
+.sidebar-article-headline {
+    -webkit-line-clamp: 3;
+    max-height: 60px;
+    font-weight: 700;
+    letter-spacing: 0;
+    font-size: 16px;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgba(41, 41, 41, 1);
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 20px;
+}
+
 @media screen and (max-width: 991.5px) {
     .sidebar {
         top: 51px
