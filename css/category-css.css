@@ -451,6 +451,7 @@
     -webkit-mask-image: radial-gradient(white, black);
 }
 .modal-content-article {
+    display: block;
     --r-globalnav-height: 44px;
     --r-globalmessage-segment-height: 0px;
     --r-globalnav-segmentbar-height: 0px;
@@ -495,9 +496,9 @@
     --modal-close-color: #6e6e73;
     --modal-close-icon-svg-size: 17px;
     visibility: visible;
-    display: block;
 }
 .article-quickread {
+    display: none;
     --r-globalnav-height: 44px;
     --r-globalmessage-segment-height: 0px;
     --r-globalnav-segmentbar-height: 0px;
@@ -932,6 +933,53 @@
     transform: translateX(-50%);
     height: var(--modal-close-icon-svg-size);
     width: var(--modal-close-icon-svg-size);
+}
+
+
+.modal-loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.modal-loader-container {
+    height: 400px;
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+  
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+  
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
 }
 
 @media only screen and (min-width: 1068px) {
