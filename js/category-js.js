@@ -5,7 +5,7 @@
 // document.querySelector(".modal-close-button").addEventListener("click", function (){
 //     document.querySelector(".overlay").style.display = "none";
 // })
-for(var i=7; i<($(".tile.mg-top").length); i++) {
+for(var i=5; i<($(".tile.mg-top").length); i++) {
     $(".tile.mg-top")[i].style.display = "none";
 }
 
@@ -30,14 +30,14 @@ for(var i=7; i<($(".tile.mg-top").length); i++) {
 
 $(".show-all,.show-less").click(function() {
     if(document.querySelectorAll(".show-all:not(.show-less)").length>0){
-        for(var i=7; i<($(".tile.mg-top").length); i++) {
+        for(var i=5; i<($(".tile.mg-top").length); i++) {
             $(".tile.mg-top")[i].style.display = "flex";
         }
         $(".show-all:not(.show-less)")[0].innerText = "Show Less";
         $(".show-all:not(.show-less)").removeClass( "show-all" ).addClass( "show-less" );
     }
     else {
-        for(var i=7; i<($(".tile.mg-top").length); i++) {
+        for(var i=5; i<($(".tile.mg-top").length); i++) {
             $(".tile.mg-top")[i].style.display = "none";
         }
         $(".show-less:not(.show-all)")[0].innerText = "Show More";
