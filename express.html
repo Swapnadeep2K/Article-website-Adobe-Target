@@ -9,6 +9,10 @@
     <input type="file" id="fileInput" />
     <img id="image-container" height="420" width="420" />
     <button id="image-crop"> Crop image </button>
+    <button id="convert-to-jpg"> Convert to JPG </button>
+    <button id="convert-to-png"> Convert to PNG </button>
+    <button id="image-resize"> Resize Image </button>
+    <button id="remove-background"> Remove Background </button>
 
     <script src="https://sdk.cc-embed.adobe.com/v2/CCEverywhere.js"></script>
     <script type="text/javascript" >
@@ -88,6 +92,74 @@
         .addEventListener('click', () => {
             ccEverywhere.openQuickAction({
                 id: 'image-crop', 
+                inputParams: {
+                    asset: {
+                        data: encodedImage, 
+                        dataType: 'base64', 
+                        type: 'image'
+                    }, 
+                    exportOptions: exportOptions
+                },
+                callbacks: callbacks,
+                modalParams: {},
+            })
+        })
+
+        document.getElementById('convert-to-jpg')
+        .addEventListener('click', () => {
+            ccEverywhere.openQuickAction({
+                id: 'convert-to-jpg', 
+                inputParams: {
+                    asset: {
+                        data: encodedImage, 
+                        dataType: 'base64', 
+                        type: 'image'
+                    }, 
+                    exportOptions: exportOptions
+                },
+                callbacks: callbacks,
+                modalParams: {},
+            })
+        })
+
+        document.getElementById('convert-to-png')
+        .addEventListener('click', () => {
+            ccEverywhere.openQuickAction({
+                id: 'convert-to-png', 
+                inputParams: {
+                    asset: {
+                        data: encodedImage, 
+                        dataType: 'base64', 
+                        type: 'image'
+                    }, 
+                    exportOptions: exportOptions
+                },
+                callbacks: callbacks,
+                modalParams: {},
+            })
+        })
+
+        document.getElementById('image-resize')
+        .addEventListener('click', () => {
+            ccEverywhere.openQuickAction({
+                id: 'image-resize', 
+                inputParams: {
+                    asset: {
+                        data: encodedImage, 
+                        dataType: 'base64', 
+                        type: 'image'
+                    }, 
+                    exportOptions: exportOptions
+                },
+                callbacks: callbacks,
+                modalParams: {},
+            })
+        })
+
+        document.getElementById('remove-background')
+        .addEventListener('click', () => {
+            ccEverywhere.openQuickAction({
+                id: 'remove-background', 
                 inputParams: {
                     asset: {
                         data: encodedImage, 
