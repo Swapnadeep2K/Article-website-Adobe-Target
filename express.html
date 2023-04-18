@@ -74,6 +74,7 @@
             onPublish: (publishParams) => {
                 if(publishParams.exportButtonId=="save-to-host-app"){
                     appImage.src = publishParams.asset.data;
+                    console.log("swap");
                     appImage.style.visibility="visible";
                 }
             },
