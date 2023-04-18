@@ -31,6 +31,7 @@
         var file, encodedImage;
         /*  appImage is the image container displayed in sample */
         var appImage = document.getElementById('image-container');
+        var projectId = null;
 
         /* This event listener checks to see if the user uploaded a new file */
         document.getElementById('fileInput')
@@ -51,6 +52,7 @@
             /* Customize export button */
             {
                 target: 'Editor',
+                id: 'full-editor',
                 variant: 'cta',
                 optionType: 'button',
                 buttonType: 'native'
@@ -81,6 +83,11 @@
                     console.log("swap");
                     window.appImage;
                     appImage.style.visibility="visible";
+                }
+                else if(publishParams.exportButtonId=="full-editor") {
+                    const localData = { project: publishParams.projectId, image: publishParams.asset.data };
+                    imageContainer.src = localData.image;
+                    projectId = localData.project;
                 }
             },
             onError: (err) => {
