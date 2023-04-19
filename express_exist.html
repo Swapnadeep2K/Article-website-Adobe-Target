@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Create Project Sample</title>
+    <title>Edit Project Sample</title>
   </head>  
   <body>
-    <button id="create-project-button">Create project</button>
+    <button id="edit-project-button">Edit project</button>
     <img id="image-container" height="420" width="420" />
 
     <script src="https://sdk.cc-embed.adobe.com/v2/CCEverywhere.js"></script>
     <script type="text/javascript">
-    
+
     (async () => {
         const ccEverywhere = await window.CCEverywhere.initialize({
             clientId: "217521108d6645a1b27e01411fb46e85",
@@ -19,14 +19,13 @@
             redirectUri: "https://experience.adobe.com/#/"
         });
 
-         /* Initialize projectId to null until it gets set by onPublish callback */
-        var projectId = null;
-        
+        // projectId should be saved from an earlier call to createDesign
+        var projectId = SAVED_CCX_PROJECT_ID;
         var imageContainer = document.getElementById("image-container");
-        const createButton = document.getElementById("create-project-button");
-
-        createButton.addEventListener('click', () => {
-            const createDesignCallback = {
+        const editButton = document.getElementById("edit-project-button");
+        
+        editButton.addEventListener('click', () => {
+            const editDesignCallback = {
                 onCancel: () => {},
                 onPublish: (publishParams) => {
                     const localData = { project: publishParams.projectId, image: publishParams.asset.data };
@@ -37,24 +36,14 @@
                     console.error('Error received is', err.toString());
                 },
             };
-            
-            ccEverywhere.createDesign(
+            ccEverywhere.editDesign(
                 {
-                    callbacks: createDesignCallback, 
-                    inputParams: {
-                        asset:{
-                            type: 'image',
-                            dataType: 'base64',
-                            data: global_base64
-                        }
-                    },
-                    outputParams: {
-                        outputType: "base64",
-                    }
+                    inputParams: { projectId: projectId },
+                    callbacks: editDesignCallback
                 }
-            );  
+            );
         });
-    })();
+    })();    
     </script>
   </body> 
 </html>
